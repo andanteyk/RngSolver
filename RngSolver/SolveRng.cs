@@ -14,7 +14,7 @@ namespace RngSolver
             var seed = new ulong[] { 0x0123456789abcdef, 0xfedcba9876543210 }
               .Select(s => new Arithmetic(s)).ToArray();
 
-            var outputs = new Arithmetic[3];
+            var outputs = new Arithmetic[seed.Length + 1];
             {
                 var clone = seed.Select(s => s.Identity()).ToArray();
                 for (int i = 0; i < outputs.Length; i++)

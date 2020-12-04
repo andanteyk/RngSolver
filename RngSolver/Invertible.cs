@@ -46,7 +46,7 @@ namespace RngSolver
 
         public static IArithmetic Output(IArithmetic s)
         {
-            return (s * 9).Rol(15) + s;
+            return s << 2 ^ s.Sar(19);
         }
         public static IArithmetic Output(IArithmetic s, IArithmetic c)
         {
